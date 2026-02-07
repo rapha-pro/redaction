@@ -21,7 +21,7 @@ from pathlib import Path
 # Standard images
 engine = ImageRedactorEngine()
 
-image = Image.open(Path("sample_data/test_image2.png"))
+image = Image.open(Path("sample_data/test_image.png"))
 
 redacted_image = engine.redact(image, (155, 11, 103))
 redacted_image.show()
