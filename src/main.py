@@ -1,5 +1,11 @@
-# from presidio_analyzer import AnalyzerEngine
+from PIL import Image
+from presidio_analyzer import AnalyzerEngine
+from presidio_analyzer import Pattern, PatternRecognizer
+from presidio_image_redactor import ImageRedactorEngine
+import matplotlib.pyplot as plt
+from pathlib import Path
 
+# -- TEXT ---
 # # Set up the engine, loads the NLP module (spaCy model by default) and other PII recognizers
 # analyzer = AnalyzerEngine()
 
@@ -11,14 +17,7 @@
 
 
 
-from PIL import Image
-from presidio_analyzer import Pattern, PatternRecognizer
-from presidio_image_redactor import ImageRedactorEngine
-import matplotlib.pyplot as plt
-from pathlib import Path
-
-
-# Standard images
+# --- Standard images ----
 engine = ImageRedactorEngine()
 
 image = Image.open(Path("sample_data/test_image.png"))
