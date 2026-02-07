@@ -1,0 +1,6 @@
+*.csv
+.vscode
+**venv/
+**/.env
+**/notes
+data/
